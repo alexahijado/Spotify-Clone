@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Albums</title>
+    <link rel="stylesheet" type="text/css" href="/styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="title">Albums</h1>
+        <ul class="albums-list">
+            {{#each albums}}
+            <li class="album-card">
+                <img src="{{images.[0].url}}" alt="{{name}} Album Cover" class="album-cover">
+                <h2 class="album-name">{{name}}</h2>
+                <a href="/tracks/{{id}}" class="view-tracks-button">View Tracks</a>
+            </li>
+            {{/each}}
+        </ul>
+    </div>
+</body>
+
+</html>

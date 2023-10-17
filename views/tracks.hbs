@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Tracks</title>
+    <link rel="stylesheet" type="text/css" href="/styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="title">Tracks</h1>
+        <ul class="tracks-list">
+            {{#each tracks}}
+            <li class="track-card">
+                <h3 class="track-name">{{name}}</h3>
+                <audio controls class="audio-player">
+                    <source src="{{preview_url}}" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </li>
+            {{/each}}
+        </ul>
+    </div>
+</body>
+
+</html>
