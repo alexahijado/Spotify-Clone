@@ -4,7 +4,7 @@ const SpotifyWebApi = require('spotify-web-api-node');
 require('dotenv').config();
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 const spotifyApi = new SpotifyWebApi({
   clientId: process.env.CLIENT_ID,
@@ -66,5 +66,5 @@ app.get('/tracks/:albumId', (req, res, next) => {
 
 
 app.listen(port, () => {
-  console.log(`Server is running on http://localhost:${port}`);
+  console.log('Hello world listening on port', port);
 });
